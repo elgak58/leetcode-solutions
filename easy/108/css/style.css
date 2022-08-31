@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+  font-family: 'Consolas';
+  src: url('./src/fonts/Consolas.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  min-height: 100vh;
+  max-height: max-content;
+  flex-grow: 1;
+  background: rgb(252,220,255);
+  background: linear-gradient(315deg, rgba(252,220,255,1) 0%, rgba(255,250,194,1) 100%);
+
+  /* background-color: #eee;   */
+  padding: 50px;
+  display: flex;
+  flex-direction: column;  
+}
+
+.container {
+  width: 80%;
+  align-self: center;
+  flex-grow: 1;
+  background-color: white; 
+  border: 1px solid orange;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 0px rgb(255 0 0 / 15%);
+  
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+
+  font-family: 'Cairo', sans-serif;
+  /* align-items: center; */
+}
+
+.container .output {
+  width: 100%;
+  flex-grow: 1;
+  background-color: #f3f3f3;
+  /* max-height: max-content; */
+  overflow: auto;
+  border: 1px solid #aaa;
+  /* border-radius: 5px; */
+  padding: 15px 20px;
+  line-height: 1rem;
+}
+
+.container h1.problem {
+  font-size: 1.6rem;
+  font-weight: normal;
+  text-align: center;
+}
+
+.container h1.problem .pnum{
+  font-weight: bold;
+}
+
+.container .title {
+  font-size: 1.6rem;
+  font-weight: normal;
+  text-align: center;
+}
