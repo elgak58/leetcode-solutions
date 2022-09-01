@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: 'Consolas';
-  src: url('./src/fonts/Consolas.ttf')  format('truetype'), /* Safari, Android, iOS */
+  src: url('../src/fonts/Consolas.ttf')  format('truetype'), /* Safari, Android, iOS */
 }
 
 *,
@@ -14,7 +14,6 @@
 }
 
 html {
-  /* height: 100vh; */
   display: flex;
   flex-direction: column;
 }
@@ -25,54 +24,51 @@ body {
   flex-grow: 1;
   background: rgb(252,220,255);
   background: linear-gradient(315deg, rgba(252,220,255,1) 0%, rgba(255,250,194,1) 100%);
-
-  /* background-color: #eee;   */
   padding: 50px;
   display: flex;
   flex-direction: column;  
 }
 
 .container {
-  width: 80%;
+  width: max-content;
+  max-width: 80%;
   align-self: center;
-  flex-grow: 1;
   background-color: white; 
   border: 1px solid orange;
   border-radius: 10px;
-  box-shadow: 0 0 5px 0px rgb(255 0 0 / 15%);
-  
+  box-shadow: 0 0 10px 0px rgb(255 0 0 / 15%);
   padding: 25px;
   display: flex;
   flex-direction: column;
-
   font-family: 'Cairo', sans-serif;
-  /* align-items: center; */
-}
-
-.container .output {
-  width: 100%;
-  flex-grow: 1;
-  background-color: #f3f3f3;
-  /* max-height: max-content; */
-  overflow: auto;
-  border: 1px solid #aaa;
-  /* border-radius: 5px; */
-  padding: 15px 20px;
-  line-height: 1rem;
+  overflow-x: hidden;
 }
 
 .container h1.problem {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: normal;
   text-align: center;
+}
+
+.container h1.problem a {
+  text-decoration: none;
 }
 
 .container h1.problem .pnum{
   font-weight: bold;
 }
 
-.container .title {
+.container h3.level {
   font-size: 1.6rem;
   font-weight: normal;
   text-align: center;
+}
+.container h3.level.easy {
+  color: green;
+}
+.container h3.level.medium {
+  color: orange;
+}
+.container h3.level.hard {
+  color: red;
 }
